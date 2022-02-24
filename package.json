@@ -1,6 +1,6 @@
 {
   "name": "solid-aspect-ratio",
-  "version": "0.3.4",
+  "version": "0.0.0",
   "types": "dist/types/index.d.ts",
   "main": "dist/cjs/production/production/index.jsx",
   "module": "dist/esm/production/production/index.jsx",

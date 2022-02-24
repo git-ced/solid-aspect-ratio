@@ -26,5 +26,5 @@
     "jsxImportSource": "solid-js",
     "esModuleInterop": true,
     "target": "ES2017"
-  } /*  */
+  }
 }
