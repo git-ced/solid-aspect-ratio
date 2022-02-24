@@ -20,6 +20,7 @@ Internally, TailwindCSS to achieve the intended aspect ratio.
 ![NPM](https://img.shields.io/npm/l/solid-aspect-ratio)
 
 ## Table of Contents
+ - [Demo](#demo)
  - [Installation](#installation)
  - [Setup](#setup)
  - [Usage](#usage)
@@ -28,6 +29,12 @@ Internally, TailwindCSS to achieve the intended aspect ratio.
  - [License](#license)
 
  <!-- toc -->
+
+## Demo
+https://solid-aspect-ratio.netlify.app/
+
+Source available in [example](example/)
+
 ## Installation
 
 This library is available through the [npm registry](https://www.npmjs.com/).
