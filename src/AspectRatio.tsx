@@ -9,19 +9,34 @@ export interface AspectRatioProps
   ratio: string | number;
 }
 
+const divideString = (
+  string: string,
+  delimiter: string,
+): number => {
+  const [numerator, denominator] = string.split(delimiter);
+
+  return parseFloat(numerator) / parseFloat(denominator);
+};
+
 export default function AspectRatio(
   props: AspectRatioProps,
 ): JSX.Element {
   const [local, divProps] = splitProps(props, ['ratio']);
 
-  const ratio = (): string => {
-    if (typeof local.ratio === 'string' && local.ratio.includes('/')) {
-      const [numerator, denominator] = local.ratio.split('/');
+  const ratio = (): number => {
+    if (typeof local.ratio === 'string') {
+      if (local.ratio.includes('/')) {
+        return divideString(local.ratio, '/');
+      }
 
-      return String(Number(numerator) / Number(denominator));
+      if (local.ratio.includes(':')) {
+        return divideString(local.ratio, ':');
+      }
+
+      return parseFloat(local.ratio);
     }
 
-    return String(local.ratio);
+    return local.ratio;
   };
 
   return (
@@ -30,7 +45,7 @@ export default function AspectRatio(
       style={{
         position: 'relative',
         width: '100%',
-        paddingTop: `${(1 / parseFloat(ratio())) * 100}%`,
+        paddingTop: `${(1 / ratio()) * 100}%`,
       }}
     >
       <div
