@@ -11,8 +11,6 @@ Creates a component with a proportional relationship between its width and heigh
 
 `ratio = width / height`
 
-Internally, TailwindCSS to achieve the intended aspect ratio.
-
 [![NPM](https://img.shields.io/npm/v/solid-aspect-ratio.svg)](https://www.npmjs.com/package/solid-aspect-ratio)
 ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/solid-aspect-ratio)
 ![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/solid-aspect-ratio)
@@ -67,6 +65,8 @@ import AspectRatio from 'solid-aspect-ratio';
 
 ## Usage
 
+Possible values for the ratio prop.
+
 ```javascript
 import AspectRatio from 'solid-aspect-ratio';
 
@@ -79,6 +79,20 @@ export default function Sample() {
   );
 }
 ```
+
+Using it with an image.
+
+```javascript
+<AspectRatio ratio={16 / 9}>
+  <img
+    src="https://picsum.photos/500"
+    alt="Picsum"
+    style={{ width: '100%', height: '100%', 'object-fit': 'cover' }}
+  />
+</AspectRatio>
+```
+
+You can check the [example](example/) folder for more usage examples.
 
 ## Authors
 

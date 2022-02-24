@@ -61,10 +61,7 @@ export default function ViewPage(): JSX.Element {
       <h2>Image Example</h2>
       <div style={{ width: '20vw' }}>
         <h3>16:9</h3>
-        <AspectRatio
-          ratio={16 / 9}
-          style={{ background: '#000', color: '#fff' }}
-        >
+        <AspectRatio ratio={16 / 9}>
           <img
             src="https://picsum.photos/500"
             alt="Picsum"
