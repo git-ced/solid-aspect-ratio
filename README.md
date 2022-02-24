@@ -66,6 +66,8 @@ import AspectRatio from 'solid-aspect-ratio';
 export default function Sample() {
   return (
     <AspectRatio ratio="3/4" />
+    <AspectRatio ratio="3:4" /> // Same as "3/4"
+    <AspectRatio ratio={3/4} /> // Same as "3/4"
     <AspectRatio ratio={0.75} /> // Same as "3/4"
   );
 }

@@ -45,7 +45,7 @@ export default function AspectRatio(
       style={{
         position: 'relative',
         width: '100%',
-        paddingTop: `${(1 / ratio()) * 100}%`,
+        'padding-top': `${(1 / ratio()) * 100}%`,
       }}
     >
       <div
